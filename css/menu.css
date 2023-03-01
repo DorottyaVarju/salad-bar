@@ -5,7 +5,7 @@
 }
 
 body {
-  background-color: rgba(237, 251, 200, 0.8);
+  background-color: rgba(253, 253, 185, 0.8);
 }
 
 nav {
@@ -15,25 +15,25 @@ nav {
   box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
 
-.navbar-collapse {
+div.navbar-collapse {
   justify-content: center;
 }
 
-.navbar-brand {
+a.navbar-brand {
   font-size: 32px;
   font-family: "Audiowide", sans-serif;
 }
 
-.nav-item {
+li.nav-item {
   padding-left: 2.7em;
   text-transform: uppercase;
 }
 
-.nav-link {
+a.nav-link {
   position: relative;
 }
 
-.nav-link:after {
+a.nav-link:after {
   background: none repeat scroll 0 0 transparent;
   bottom: 0;
   content: "";
@@ -46,7 +46,7 @@ nav {
   width: 0;
 }
 
-.nav-link:hover:after {
+a.nav-link:hover:after {
   width: 100%;
   left: 0;
 }
@@ -57,7 +57,7 @@ nav {
 }
 @media only screen and (max-width: 1200px) {
 
-  .nav-item {
+  li.nav-item {
     font-size: 1.8vw;
     letter-spacing: 0.1rem;
     padding-left: 0.2em;
@@ -65,7 +65,7 @@ nav {
 }
 
 @media only screen and (max-width: 992px) {
-  .nav-item {
+  li.nav-item {
     font-size: 13px;
   }
 }

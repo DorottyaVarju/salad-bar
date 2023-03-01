@@ -1,0 +1,18 @@
+section.products {
+  padding: 3%;
+  height: 300px;
+}
+
+img.salads {
+  width: 30%;
+  height: auto;
+  margin-right: 10%;
+}
+
+section > div {
+  float: right;
+  width: 55%;
+  margin-top: 5%;
+  height: 100%;
+  overflow: scroll;
+}
