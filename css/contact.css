@@ -1,0 +1,33 @@
+section.contact:first-child {
+  padding: 7%;
+  padding-bottom: 0%;
+  margin-bottom: 3%;
+}
+
+section.contact:nth-child(2) {
+  padding: 0%;
+}
+
+section > div {
+  float: left;
+  width: 50%;
+  text-align: center;
+}
+
+iframe {
+  width: 80%;
+  height: 100%;
+  margin: 0% 10%;
+}
+
+h2 {
+  font-family: "Lobster", sans-serif;
+}
+
+ul li {
+  font-size: 18px;
+}
+
+li {
+  list-style-type: none;
+}
