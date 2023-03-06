@@ -48,6 +48,15 @@ input {
   border-radius: 20px;
 }
 
+p.text-danger {
+  margin-top: 10px;
+  font-size: 14px;
+}
+p.success {
+  text-align: center;
+  margin: auto;
+}
+
 @media only screen and (max-width: 768px) {
   main {
     margin-top: 100px;

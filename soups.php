@@ -5,7 +5,7 @@ require_once "productsFunction.php";
 <link rel="stylesheet" href="css/products.css" type="text/css" />
 
 <main class="container-fluid">
-     <?php
+<?php
 
 $stmt = $conn->prepare("SELECT * FROM salad_bar.product where type='soup';");
 $stmt->execute();
@@ -17,3 +17,4 @@ Products();
 </main>
 <?php
 require_once "footer.php";
+?>
