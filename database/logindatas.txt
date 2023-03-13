@@ -1,0 +1,8 @@
+Email: jason.kim@yahoo.com
+Password: Passw0rd!23
+
+Email: amy.nguyen@gmail.com
+Password: SecurePass789
+
+Email: mike.johnson@hotmail.com
+Password: MyPassword456
