@@ -20,7 +20,7 @@ nav {
 
 #collapsibleNavbar {
   padding-bottom: 20px;
-  overflow: scroll;
+  overflow-y: visible;
 }
 
 div.navbar-collapse {
@@ -38,11 +38,13 @@ li.nav-item {
   white-space: nowrap;
 }
 
-a.nav-link {
+li > a.nav-link,
+li > a.dropdown-item {
   position: relative;
 }
 
-a.nav-link:after {
+li > a.nav-link:after,
+li > a.dropdown-item:after {
   background: none repeat scroll 0 0 transparent;
   bottom: 0;
   content: "";
@@ -55,9 +57,14 @@ a.nav-link:after {
   width: 0;
 }
 
-a.nav-link:hover:after {
+li > a.nav-link:hover:after,
+li > a.dropdown-item:hover:after {
   width: 100%;
   left: 0;
+}
+
+li > a.dropdown-item:hover {
+  background-color: transparent;
 }
 
 @media only screen and (max-width: 1565px) {

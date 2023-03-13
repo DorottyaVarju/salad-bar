@@ -1,47 +1,20 @@
-main {
-  margin-bottom: 250px;
-}
-
-section.products {
-  padding: 3%;
-  height: 300px;
-}
-
-img.products {
-  width: 30%;
-  height: auto;
-  margin-right: 10%;
+table {
+  text-align: center;
+  border: 1px solid rgba(0, 0, 0, 0.09);
   box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
     rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
     rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  background-color: rgba(225, 250, 158, 0.4);
 }
 
-section > div {
-  float: right;
-  width: 55%;
-  margin-top: 5%;
-  height: 100%;
-  overflow: scroll;
-}
-
-p.prices {
-  font-weight: bold;
-}
-
-h3 {
+th {
   font-family: "Lobster", sans-serif;
+  font-size: 32px;
 }
 
-p {
-  text-align: start;
-}
-
-button.basket {
-  width: 30%;
-  min-width: 122.4px;
-  border-radius: 20px;
+tr {
   box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
     rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
     rgba(0, 0, 0, 0.09) 0px 32px 16px;
-  height: 35px;
+  font-size: 22px;
 }

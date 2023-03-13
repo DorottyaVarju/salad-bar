@@ -1,13 +1,12 @@
 <?php
-require_once('header.php');
-?>
-<link rel="stylesheet" href="css/contact.css" type="text/css" />
+require_once "./header.php"; ?>
+<link rel="stylesheet" href="../css/contact.css" type="text/css" />
 
 <main class="container-fluid">
   <section class="col-sm-12 contact">
     <div>
       <h2>Contact Us</h2>
-      <ul>
+      <ul class="contactData">
         <li>Salad Bar <i class="fa fa-leaf"></i></li>
         <li>123 Main Street</li>
         <li>Anytown, USA 12345</li>
@@ -18,7 +17,7 @@ require_once('header.php');
     <br /><br /><br />
     <div>
       <h2>OPENING HOURS</h2>
-      <ul>
+      <ul class="contactData">
         <li>Monday - Saturday: 9:00 AM - 10:00 PM</li>
         <li>On Sunday, CLOSED</li>
       </ul>
@@ -34,6 +33,5 @@ require_once('header.php');
     ></iframe>
   </section>
 </main>
-<?php
-require_once "footer.php";
-?> 
+
+<?php require_once "./footer.php"; ?>  ?>

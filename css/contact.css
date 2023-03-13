@@ -1,3 +1,7 @@
+main {
+  margin-bottom: 0px;
+}
+
 section.contact:first-child {
   padding: 7%;
   padding-bottom: 0%;
@@ -24,10 +28,7 @@ h2 {
   font-family: "Lobster", sans-serif;
 }
 
-ul li {
+ul.contactData > li {
   font-size: 18px;
-}
-
-li {
   list-style-type: none;
 }

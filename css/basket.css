@@ -1,0 +1,25 @@
+button.btn-success {
+  width: 20%;
+  min-width: 85px;
+  border-radius: 20px;
+  float: left;
+}
+
+button.till {
+  margin-top: 15px;
+  float: right;
+}
+
+select.form-select {
+  width: 55px;
+  float: left;
+  margin-right: 10px;
+}
+
+select:hover {
+  cursor: pointer;
+}
+
+td:nth-child(3) {
+  min-width: 200px;
+}

@@ -1,15 +1,24 @@
 main {
   margin-top: 40px;
-  margin-bottom: 250px;
 }
 
 h1,
-span {
+th {
   font-family: "Lobster", sans-serif;
 }
 
 h1 {
   font-size: 32px;
+}
+
+th {
+  font-size: 24px;
+  float: left;
+}
+
+tr {
+  font-size: 20px;
+  text-align: end;
 }
 
 form {
@@ -25,8 +34,10 @@ form {
   text-align: center;
 }
 
-section:first-child {
+section.currentData {
   margin-bottom: 4%;
+  padding-top: 200px;
+  padding-left: 15%;
 }
 
 input {
@@ -47,15 +58,6 @@ input {
   min-width: 85px;
   margin-top: 20px;
   border-radius: 20px;
-}
-
-p.text-danger {
-  margin-top: 10px;
-  font-size: 14px;
-}
-p.success {
-  text-align: center;
-  margin: auto;
 }
 
 @media only screen and (max-width: 768px) {

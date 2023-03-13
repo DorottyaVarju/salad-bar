@@ -1,0 +1,17 @@
+footer {
+  clear: both;
+  position: relative;
+  height: 190px;
+  margin-top: -190px;
+  padding-top: 20px;
+  background-color: rgba(200, 245, 177);
+}
+
+p.footerItem {
+  text-align: center;
+}
+
+p#orderToday {
+  font-size: 24px;
+  font-family: "Lobster", sans-serif;
+}

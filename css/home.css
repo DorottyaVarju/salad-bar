@@ -1,5 +1,8 @@
 main {
+  position: relative;
+  min-height: 100vh;
   margin-top: 110px;
+  margin-bottom: 110px;
   letter-spacing: 0.1rem;
 }
 
@@ -12,7 +15,7 @@ section:first-child {
   padding: 5% 2.5% 5% 7.5%;
 }
 
-section:last-child {
+section:nth-child(2) {
   padding: 5% 7.5% 5% 2.5%;
 }
 
@@ -29,7 +32,43 @@ section > video {
     rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
 
-h1 > span {
+h1 > span,
+p > span {
   font-family: "Lobster", sans-serif;
   letter-spacing: 0.3rem;
+}
+
+p > span {
+  letter-spacing: normal;
+  font-size: 34px;
+  text-decoration: underline;
+}
+
+p.info {
+  font-size: 28px;
+}
+
+p.info:nth-child(2) {
+  font-size: 26px;
+  font-style: italic;
+}
+
+@media only screen and (max-width: 1200px) {
+  section.video,
+  section.welcome {
+    padding: 5%;
+    width: 100%;
+  }
+
+  p > span {
+    font-size: 31px;
+  }
+
+  p.info {
+    font-size: 25px;
+  }
+
+  p.info:nth-child(2) {
+    font-size: 23px;
+  }
 }
