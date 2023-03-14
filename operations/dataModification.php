@@ -6,7 +6,6 @@ if (isset($_SESSION["id"])) {
   if (isset($_POST["submit"])) {
     $modifiedData = "";
     $setting = "";
-    echo $modifiedData;
     if (!empty($_POST["firstname"])) {
       $firstname = htmlspecialchars(trim($_POST["firstname"]));
       if (preg_match($pattern, $setting) == 1) {
@@ -40,30 +39,50 @@ if (isset($_SESSION["id"])) {
       $modifiedData .= " address";
       $_SESSION["address"] = $address;
     }
+
     if (
       !empty($_POST["oldPassword"]) &&
       !empty($_POST["newPassword"]) &&
       !empty($_POST["newPasswordConf"])
     ) {
-      if ($_POST["newPassword"] == $_POST["newPasswordConf"]) {
-        $oldPassword = htmlspecialchars(trim($_POST["oldPassword"]));
-        $newPassword = htmlspecialchars(trim($_POST["newPassword"]));
-        $newPasswordConf = htmlspecialchars(trim($_POST["newPasswordConf"]));
-        $hashedPassword = sha1($newPassword);
-        if (preg_match($pattern, $setting) == 1) {
-          $setting .= ", pw=:hashedPassword ";
+      try {
+        $row = $conn->prepare("SELECT * FROM users WHERE id = :id");
+        $params = [":id" => $id];
+        $row->execute($params);
+        $getRow = $row->fetch(PDO::FETCH_ASSOC);
+        $passwordInDB = $getRow["pw"];
+      } catch (Exception $e) {
+        $e->getMessage();
+      }
+
+      $oldPassword = htmlspecialchars(trim($_POST["oldPassword"]));
+      $newPassword = htmlspecialchars(trim($_POST["newPassword"]));
+      $newPasswordConf = htmlspecialchars(trim($_POST["newPasswordConf"]));
+      $hashedOldPw = sha1($oldPassword);
+      $hashedNewPw = sha1($newPassword);
+      if ($passwordInDB == $hashedOldPw) {
+        if ($_POST["newPassword"] == $_POST["newPasswordConf"]) {
+          if (preg_match($pattern, $setting) == 1) {
+            $setting .= ", pw=:hashedNewPw ";
+          } else {
+            $setting .= " SET pw=:hashedNewPw ";
+          }
+          $paramsUpdate[":hashedNewPw"] = $hashedNewPw;
+          $modifiedData .= " password";
         } else {
-          $setting .= " SET pw=:hashedPassword ";
+          $passwordsDontMatch = "No matching passwords.";
         }
-        $paramsUpdate[":hashedPassword"] = $hashedPassword;
-        $modifiedData .= " password";
       } else {
-        $passwordsDontMatch = "No matching passwords.";
+        $wrongOldPassword = "Wrong old password.";
       }
     }
+
     if (
-      !empty($_POST["oldPassword"]) &&
-      (empty($_POST["newPassword"]) || empty($_POST["newPasswordConf"]))
+      (!empty($_POST["oldPassword"]) && empty($_POST["newPassword"])) ||
+      (!empty($_POST["oldPassword"]) && empty($_POST["newPasswordConf"])) ||
+      (!empty($_POST["oldPassword"]) &&
+        empty($_POST["newPassword"]) &&
+        empty($_POST["newPasswordConf"]))
     ) {
       $passwordsDontMatch = "Enter a new password and confirm it.";
     }
@@ -78,15 +97,15 @@ if (isset($_SESSION["id"])) {
     ) {
       $allEmpty = "Fill in the fields you want.";
     }
-    if (isset($setting)) {
+    if (!empty($setting)) {
       try {
         $query = "UPDATE users" . $setting . "WHERE id=:id";
 
         $paramsUpdate[":id"] = $id;
 
-        $handleUpdate = $conn->prepare($query);
+        $rowUpdate = $conn->prepare($query);
 
-        $handleUpdate->execute($paramsUpdate);
+        $rowUpdate->execute($paramsUpdate);
         $success =
           "You have successfully changed the following:" . $modifiedData . ".";
       } catch (Exception $e) {

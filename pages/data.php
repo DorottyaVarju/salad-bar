@@ -53,7 +53,9 @@ require_once "../operations/dataModification.php";
       <input type="password" name="newPassword" id="newPassword"><br><br>
       <label for="newPasswordConf">New password confirmation</label><br>
       <input type="password" name="newPasswordConf" id="newPasswordConf">
-      <?php if (isset($passwordsDontMatch)) {
+      <?php if (isset($wrongOldPassword)) {
+        echo "<p class='text-danger'>" . $wrongOldPassword . "</p>";
+      } elseif (isset($passwordsDontMatch)) {
         echo "<p class='text-danger'>" . $passwordsDontMatch . "</p>";
       } else {
         echo "<br><br>";
@@ -70,4 +72,6 @@ if (isset($success) || isset($allEmpty)) {
   </script>';
 }
 require_once "./footer.php";
+
+
 ?>
