@@ -27,11 +27,12 @@ function Products(): void
       $r["product_name"] .
       "'data-product-price='" .
       $r["price"] .
-      "'>To Basket &nbsp;<i class='fa fa-shopping-basket'></i></button>
+      "' data-product-quantity=1>To Basket &nbsp;<i class='fa fa-shopping-basket'></i></button>
           </p>
           </div>
           </section>
           ";
   }
+  echo "<script src='../js/basket.js'></script>";
 }
 ?>
