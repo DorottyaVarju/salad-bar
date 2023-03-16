@@ -23,3 +23,7 @@ select:hover {
 td:nth-child(3) {
   min-width: 200px;
 }
+
+i.fa-trash:hover {
+  cursor: pointer;
+}
