@@ -23,5 +23,8 @@ require_once "../operations/dataModification.php";
   </table>
   <button class="btn btn-success till">To till</button>
 </main>
+<script src="../js/basket.js"></script>
 <script src="../js/display.js"></script>
+<script src="../js/delete.js"></script>
+<script src="../js/add.js"></script>
 <?php require_once "./footer.php"; ?>
