@@ -21,10 +21,11 @@ require_once "../operations/dataModification.php";
     <tbody>
     </tbody>
   </table>
-  <button class="btn btn-success till">To till</button>
+  <a href="../operations/placeOrder.php"><button class="btn btn-success order">Place Order</button></a>
 </main>
 <script src="../js/basket.js"></script>
 <script src="../js/display.js"></script>
 <script src="../js/delete.js"></script>
 <script src="../js/add.js"></script>
+
 <?php require_once "./footer.php"; ?>
