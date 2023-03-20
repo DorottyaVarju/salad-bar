@@ -2,6 +2,8 @@
 
 function Products(): void
 {
+  $id = $_SESSION["id"];
+
   foreach ($GLOBALS["result"] as $r) {
     echo "
           <section class='col-lg-6 products'>
@@ -21,14 +23,18 @@ function Products(): void
       "</p>
           <p class='prices'>" .
       $r["price"] .
-      "$ &nbsp; <button class='btn btn-success basket' data-product-id='" .
-      $r["id"] .
-      "' data-product-name='" .
-      $r["product_name"] .
-      "'data-product-price='" .
-      $r["price"] .
-      "' data-product-quantity=1>To Basket &nbsp;<i class='fa fa-shopping-basket'></i></button>
-          </p>
+      "$";
+    if (isset($id)) {
+      echo " &nbsp; <button class='btn btn-success basket' data-product-id='" .
+        $r["id"] .
+        "' data-product-name='" .
+        $r["product_name"] .
+        "'data-product-price='" .
+        $r["price"] .
+        "' data-product-quantity=1>To Basket &nbsp;<i class='fa fa-shopping-basket'></i></button>";
+    }
+
+    echo "</p>
           </div>
           </section>
           ";
