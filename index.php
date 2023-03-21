@@ -33,7 +33,7 @@
   </section>
 
   <section class="col-sm-12">
-    <p class="info">You can <span>place your order</span> at the following phone number: <b>(555) 555-1234</b> or throught our website <b>with registration<b></p>
+    <p class="info">You can <span>place your order</span> at the following phone number: <b>(555) 555-1234</b> or through our website <b>with registration<b></p>
     <p class="info">Opening hours: <b>Monday - Saturday: 9:00 AM - 10:00 PM</b></p>
   </section>
 </main>
