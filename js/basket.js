@@ -32,6 +32,17 @@ let quantity = 1;
       productsInBasket.push(product);
     }
     setCookie("productsInBasket", productsInBasket, 1);
+    let added = Array.from(document.getElementsByClassName("added"));
+    if(added.length != 0) {
+      added.forEach((a) => {
+        a.remove();
+      })
+    };
+
+    let add = document.createElement("p");
+    add.innerText = "Just added to basket";
+    add.classList.add("text-success", "added");
+    b.parentElement.appendChild(add);
     alreadyInBasket = false;
     product = [];
   });

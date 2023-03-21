@@ -45,3 +45,7 @@ button.basket {
     rgba(0, 0, 0, 0.09) 0px 32px 16px;
   height: 35px;
 }
+
+p.added {
+  margin-top: 12px;
+}
