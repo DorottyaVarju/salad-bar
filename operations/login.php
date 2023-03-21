@@ -27,6 +27,18 @@ if (isset($_POST["submit1"])) {
         $_SESSION["firstname"] = $getRow["firstname"];
         $_SESSION["lastname"] = $getRow["lastname"];
         $_SESSION["address"] = $getRow["address"];
+
+        if(!empty($_POST["remember"]))
+        {
+            setcookie("email",$email,time()+ 3600);
+            setcookie("password",$password,time()+ 3600);
+            echo "Cookies Set Successfuly";
+        }
+        else
+        {
+            setcookie("email","");
+            setcookie("password","");
+        }
         header("Location: /salad-bar/pages/salads.php");
       } else {
         $wrongPassword = "Wrong password.";

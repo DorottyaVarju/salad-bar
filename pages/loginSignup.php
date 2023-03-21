@@ -25,6 +25,7 @@ require_once "../operations/login.php";
           name="email1"
           id="email1"
           placeholder="test@test.com"
+          <?php if(isset($_COOKIE["email"])) { echo "value=".$_COOKIE["email"]; } ?>
         />
         <?php if (isset($notRegisteredEmail)) {
           echo '<p class="text-danger">' . $notRegisteredEmail . "</p>";
@@ -40,6 +41,7 @@ require_once "../operations/login.php";
           name="password1"
           id="password1"
           placeholder="Blueberry123"
+          <?php if(isset($_COOKIE["password"])) { echo "value=".$_COOKIE["password"]; } ?>
         />
         <?php if (isset($wrongPassword)) {
           echo '<p class="text-danger">' . $wrongPassword . "</p>";
@@ -48,6 +50,8 @@ require_once "../operations/login.php";
         } else {
           echo "<br /><br />";
         } ?>
+        <label for="remember"><span>Remember me</span></label>
+        <input type="checkbox" name="remember" id="remember"><br>
         <input
           type="submit"
           class="btn btn-success submit"
@@ -60,7 +64,7 @@ require_once "../operations/login.php";
       <hr />
       <br />
       <fieldset>
-        <a href="#">Did you forget Your password?</a><br /><br />
+        <a href="#" class="link-success">Did you forget Your password?</a><br /><br />
         <p>
           Don't have an account yet?
           <span>Sign up! <i class="fa fa-arrow-right"></i></span>

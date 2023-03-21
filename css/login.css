@@ -29,6 +29,10 @@ section:first-child {
   margin-bottom: 4%;
 }
 
+section.loginSignup {
+  min-width: 400px;
+}
+
 input {
   border: none;
   border-bottom: 1px solid rgba(0, 0, 0, 0.09);
@@ -42,6 +46,18 @@ input {
   padding: 5px 20px;
 }
 
+
+form input[type=checkbox]
+{
+  width: 20px;
+  height: 20px;
+  accent-color: #198754;;
+}
+
+form input[type=checkbox]:hover {
+  cursor: pointer;
+}
+
 .submit {
   width: 20%;
   min-width: 85px;
@@ -53,12 +69,13 @@ p.text-danger {
   margin-top: 10px;
   font-size: 14px;
 }
+
 p.success {
   text-align: center;
   margin: auto;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1200px) {
   main {
     margin-top: 100px;
   }
@@ -71,4 +88,11 @@ p.success {
     display: grid;
     justify-content: center;
   }
+
+  i.fa-arrow-right {
+    transform: rotate(90deg);
+  }
+}
+
+@media only screen and (max-width: 768px) {
 }
