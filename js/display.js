@@ -15,20 +15,26 @@ for (i = 1; i < productData.length; i += 4) {
   tbody[0].appendChild(tr);
   for (j = 0; j < 5; j++) {
     td = document.createElement("td");
-    if (j == 0) {
-      td.innerText = productData[i];
-    } else if (j == 1) {
-      td.innerText = productData[i + 2];
-      totalQuantity += Number(productData[i + 2]);
-    } else if (j == 2) {
-      td.innerHTML =
-        "<select class='form-select'><option selected>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option></select> <button class='btn btn-success add'>Add</button>";
-    } else if (j == 3) {
-      td.innerHTML = "<i class='fa fa-trash'></i>";
-    } else if (j == 4) {
-      price = (productData[i + 1] * productData[i + 2]).toFixed(2);
-      td.innerText = price + "$";
-      totalPrice += Number(price);
+    switch (j) {
+      case 0:
+        td.innerText = productData[i];
+        break;
+      case 1:
+        td.innerText = productData[i + 2];
+        totalQuantity += Number(productData[i + 2]);
+        break;
+      case 2:
+        td.innerHTML =
+          "<select class='form-select'><option selected>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option></select> <button class='btn btn-success add'>Add</button>";
+        break;
+      case 3:
+        td.innerHTML = "<i class='fa fa-trash'></i>";
+        break;
+      case 4:
+        price = (productData[i + 1] * productData[i + 2]).toFixed(2);
+        td.innerText = price + "$";
+        totalPrice += Number(price);
+        break;
     }
     tr.appendChild(td);
   }
