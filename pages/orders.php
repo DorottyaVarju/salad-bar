@@ -5,9 +5,9 @@ require_once "../database/dbConnection.php";
 <link rel="stylesheet" href="/salad-bar/css/orders.css" type="text/css" />
 
 <main class="container">
-<table class="table table-condensed table-borderless" >
+<table class="table" >
     <thead>
-      <tr><th></th><th>Your Previous Orders</th><th></th></tr>
+      <tr><th colspan="3" class="heading">Your Previous Orders</th></tr>
       <tr>
         <th>Order ID</th>
         <th>Sum</th>
