@@ -1,24 +1,44 @@
+body {
+  position: relative;
+}
+
+body::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../media/image/table.jpg");
+  opacity: 0.5;
+}
+
 main {
   margin-top: 40px;
 }
 
-h1,
-th {
+h1 {
   font-family: "Lobster", sans-serif;
 }
 
 h1 {
-  font-size: 32px;
+  font-size: 26px;
+}
+
+table {
+  width:100%;
+  background-color: rgba(225, 250, 158, 0.4);
+  border: 1px solid rgba(0, 0, 0, 0.09);
+box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
 
 th {
-  font-size: 24px;
-  float: left;
+  text-align: center;
 }
 
 tr {
-  font-size: 20px;
-  text-align: end;
+  text-align: center;
 }
 
 form {
@@ -37,7 +57,6 @@ form {
 section.currentData {
   margin-bottom: 4%;
   padding-top: 200px;
-  padding-left: 15%;
 }
 
 input {
@@ -60,13 +79,22 @@ input {
   border-radius: 20px;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1200px) {
   main {
     margin-top: 100px;
   }
 
   section.col-md-6 {
     padding: inherit;
+    width: 100%;
+  }
+
+  section.currentData {
+    padding-top: 0px;
+  }
+
+  section.dataModification:nth-child(2) {
+    margin-bottom: 120px;
   }
 
   main.container-fluid {

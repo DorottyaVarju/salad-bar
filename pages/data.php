@@ -17,23 +17,22 @@ require_once "../operations/dataModification.php";
     "</p>";
 } ?>
   <section class="col-md-6 currentData dataModification">
-  <table class="table-responsive table-borderless">
+    <h1>Your Current Data</h1>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Firstname</th>
+        <th >Lastname</th>
+        <th>Email</th>
+        <th>Address</th>
+      </tr>
+  </thead>
   <tbody>
     <tr>
-      <th scope="row">Firstname</th>
       <td><?php echo $_SESSION["firstname"]; ?></td>
-    </tr>
-    <tr>
-      <th scope="row">Lastname</th>
       <td><?php echo $_SESSION["lastname"]; ?></td>
-    </tr>
-    <tr>
-      <th scope="row">Email</th>
-      <td>  <?php echo $_SESSION["email"]; ?></td>
-    </tr>
-    <tr>
-      <th scope="row">Address</th>
-      <td>  <?php echo $_SESSION["address"]; ?></td>
+      <td><?php echo $_SESSION["email"]; ?></td>
+      <td><?php echo $_SESSION["address"]; ?></td>
     </tr>
   </tbody>
 </table>
