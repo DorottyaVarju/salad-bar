@@ -20,4 +20,4 @@ require_once "../operations/productsFunction.php";
 
 </main>
 
-<?php require_once "./footer.php"; ?>  ?>
+<?php require_once "./footer.php"; ?>
