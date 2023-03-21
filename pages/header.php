@@ -68,7 +68,7 @@ session_start(); ?>
                 echo '
               <div class="dropdown"><a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">' .
                   $_SESSION["firstname"] .
-                  ' <i class="fa fa-user"></i></a>
+                  ' <i class="fa fa-user-circle-o"></i></a>
                 <ul class="dropdown-menu">
                   <li><a class="dropdown-item" href="/salad-bar/pages/data.php">Data</a></li>
                   <li><a class="dropdown-item" href="/salad-bar/pages/orders.php">Orders</a></li>
@@ -78,7 +78,7 @@ session_start(); ?>
                 </ul>
               </div>';
               } else {
-                echo '<a class="nav-link" href="/salad-bar/pages//loginSignup.php">Log In <i class="fa fa-user"></i></a>';
+                echo '<a class="nav-link" href="/salad-bar/pages//loginSignup.php">Log In <i class="fa fa-user-circle-o"></i></a>';
               } ?>
             </li>
           </ul>

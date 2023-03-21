@@ -40,6 +40,7 @@ div.navbar-collapse {
 a.navbar-brand {
   font-size: 32px;
   font-family: "Lobster", sans-serif;
+  padding-bottom: 20px;
 }
 
 li.nav-item {
