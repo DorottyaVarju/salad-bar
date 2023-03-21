@@ -18,9 +18,6 @@ require_once "../database/dbConnection.php";
      $p = 2;
      foreach ($productsInBasket as $key => $value) {
        if ($i % 4 == 0) {
-         if ($key == 0) {
-           $productsInBasket[$key] = substr($productsInBasket[$key], 1);
-         }
          array_push($productIDs, (int) $productsInBasket[$key]);
        }
        if ($p <= count($productsInBasket)) {

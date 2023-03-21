@@ -1,13 +1,3 @@
-function getCookie(name) {
-  const cookies = document.cookie.split("; ");
-  for (let i = 0; i < cookies.length; i++) {
-    const cookie = cookies[i].split("=");
-    if (cookie[0] === name) {
-      return cookie[1];
-    }
-  }
-  return null;
-}
 let productData;
 let tr, td;
 let totalQuantity = 0,
@@ -28,7 +18,6 @@ for (i = 1; i < productData.length; i += 4) {
     if (j == 0) {
       td.innerText = productData[i];
     } else if (j == 1) {
-      productData[i + 2] = productData[i + 2].replace('"', "");
       td.innerText = productData[i + 2];
       totalQuantity += Number(productData[i + 2]);
     } else if (j == 2) {

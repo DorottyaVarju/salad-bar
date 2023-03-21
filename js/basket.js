@@ -1,7 +1,12 @@
 const basket = document.querySelectorAll(".basket");
 let i, n, p;
 let product = [];
-let productsInBasket = [];
+let productsInBasket;
+productsInBasket = getCookie("productsInBasket").split(",");
+if (productsInBasket[0] == "") {
+  productsInBasket = [];
+}
+
 let alreadyInBasket = false;
 let quantity = 1;
 
@@ -26,7 +31,7 @@ let quantity = 1;
     } else {
       productsInBasket.push(product);
     }
-    setCookie("productsInBasket", '"' + productsInBasket + '"', 1);
+    setCookie("productsInBasket", productsInBasket, 1);
     alreadyInBasket = false;
     product = [];
   });
@@ -40,4 +45,15 @@ function setCookie(name, value, days) {
     expires = "; expires=" + date.toUTCString();
   }
   document.cookie = name + "=" + value + expires + "; path=/";
+}
+
+function getCookie(name) {
+  const cookies = document.cookie.split("; ");
+  for (let i = 0; i < cookies.length; i++) {
+    const cookie = cookies[i].split("=");
+    if (cookie[0] === name) {
+      return cookie[1];
+    }
+  }
+  return null;
 }

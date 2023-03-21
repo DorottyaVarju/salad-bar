@@ -33,7 +33,6 @@ function Products(): void
         $r["price"] .
         "' data-product-quantity=1>To Basket &nbsp;<i class='fa fa-shopping-basket'></i></button>";
     }
-
     echo "</p>
           </div>
           </section>
