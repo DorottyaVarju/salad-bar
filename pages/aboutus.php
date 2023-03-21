@@ -43,4 +43,4 @@ require_once "../database/dbConnection.php";
      ?>
 </main>
 
-<?php require_once "./footer.php"; ?>  ?>
+<?php require_once "./footer.php"; ?>
