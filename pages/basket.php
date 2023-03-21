@@ -8,8 +8,9 @@ require_once "../operations/dataModification.php";
 <link rel="stylesheet" href="/salad-bar/css/basket.css" type="text/css" />
 
 <main class="container">
-    <table class="table table-condensed table-borderless" >
+    <table class="table" >
     <thead>
+      <tr><th colspan="5" class="heading">Basket <i class="fa fa-shopping-basket"></i></th></tr>
       <tr>
         <th>Productname</th>
         <th>Quantity</th>

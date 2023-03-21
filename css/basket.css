@@ -1,6 +1,6 @@
 button.btn-success {
   width: 20%;
-  min-width: 85px;
+  min-width: 140px;
   border-radius: 20px;
   float: left;
 }
@@ -21,7 +21,9 @@ select:hover {
 }
 
 td:nth-child(3) {
-  min-width: 200px;
+  min-width: 300px;
+  display: flex;
+  justify-content: center;
 }
 
 i.fa-trash:hover {
