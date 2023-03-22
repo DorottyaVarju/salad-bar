@@ -1,7 +1,7 @@
 <?php require_once "./pages/header.php"; ?>
 
 <main class="container-fluid">
-  <section class="col-xl-6 welcome">
+  <section class="col-sm-12 welcome">
     <h1>
       Welcome to <span>Salad Bar <i class="fa fa-leaf"></i></span>!
     </h1>
@@ -24,18 +24,13 @@
       Thank you for visiting our website, and we can't wait to see you in
       person!
     </p>
-    </section>
-
-  <section class="col-xl-6 video">
-    <video width="640" height="480" autoplay loop>
-      <source src="./media/video/vegetables.mp4" type="video/mp4" />
-    </video>
+    <hr>
   </section>
-
   <section class="col-sm-12">
-    <p class="info">You can <span>place your order</span> at the following phone number: <b>(555) 555-1234</b> or through our website <b>with registration<b></p>
-    <p class="info">Opening hours: <b>Monday - Saturday: 9:00 AM - 10:00 PM</b></p>
+    <p class="info">You can <span>place your order</span> at the following phone number: <span>(555) 555-1234</span> or through our website <span>with registration</span></p>
+    <p class="info">Opening hours: <span>Monday - Saturday: 9:00 AM - 10:00 PM</span></p>
   </section>
+
 </main>
 
 <?php require_once "./pages/footer.php"; ?>

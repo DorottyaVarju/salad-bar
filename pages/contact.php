@@ -16,7 +16,7 @@ require_once "./header.php"; ?>
     </div>
     <br /><br /><br />
     <div>
-      <h2>OPENING HOURS</h2>
+      <h2>Opening Hours</h2>
       <ul class="contactData">
         <li>Monday - Saturday: 9:00 AM - 10:00 PM</li>
         <li>On Sunday, CLOSED</li>

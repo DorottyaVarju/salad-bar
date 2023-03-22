@@ -4,8 +4,13 @@ main {
   justify-content: center;
 }
 
+h2 {
+  font-size: 26px;
+  font-family: "Lobster", sans-serif;
+}
+
 section.contact {
-  padding-top: 7%;
+  padding: 7% 2% 2% 0%;
 }
 
 section.contact:first-child {
@@ -15,10 +20,6 @@ section.contact:first-child {
 
 section > div {
   width: 40%;
-}
-
-h2 {
-  font-family: "Lobster", sans-serif;
 }
 
 ul.contactData > li {
@@ -43,7 +44,8 @@ section.map-responsive iframe {
   }
 
   section.contact {
-    width: 90vw;
+    width: 100%;
+    padding-right: 0%;
   }
 
   section.contact:first-child {
@@ -51,8 +53,6 @@ section.map-responsive iframe {
   }
 
   section.map-responsive {
-    padding-left: 0%;
-    padding-right: 0%;
-
+    padding: 0%;
   }
 }
