@@ -5,23 +5,24 @@ let totalQuantity = 0,
 totalPrice = 0;
 const tbody = document.getElementsByTagName("tbody");
 
-console.log(getCookie("productsInBasket"));
-
 productData = getCookie("productsInBasket").split(",");
-console.log(productData);
 
-for (i = 1; i < productData.length; i += 4) {
+if (productData[0] == "") {
+  productData.shift();
+}
+
+for (i = 0; i < productData.length; i += 4) {
   tr = document.createElement("tr");
   tbody[0].appendChild(tr);
   for (j = 0; j < 5; j++) {
     td = document.createElement("td");
     switch (j) {
       case 0:
-        td.innerText = productData[i];
+        td.innerText = productData[i + 1];
         break;
       case 1:
-        td.innerText = productData[i + 2];
-        totalQuantity += Number(productData[i + 2]);
+        td.innerText = productData[i + 3];
+        totalQuantity += Number(productData[i + 3]);
         break;
       case 2:
         td.innerHTML =
@@ -31,7 +32,7 @@ for (i = 1; i < productData.length; i += 4) {
         td.innerHTML = "<i class='fa fa-trash'></i>";
         break;
       case 4:
-        price = (productData[i + 1] * productData[i + 2]).toFixed(2);
+        price = (productData[i + 2] * productData[i + 3]).toFixed(2);
         td.innerText = price + "$";
         totalPrice += Number(price);
         break;

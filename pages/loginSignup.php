@@ -51,7 +51,7 @@ require_once "../operations/login.php";
           echo "<br /><br />";
         } ?>
         <label for="remember"><span>Remember me</span></label>
-        <input type="checkbox" name="remember" id="remember"><br>
+        <input type="checkbox" name="remember" id="remember" checked><br>
         <input
           type="submit"
           class="btn btn-success submit"

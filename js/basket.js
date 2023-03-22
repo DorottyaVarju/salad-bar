@@ -15,9 +15,10 @@ let quantity = 1;
     i = b.getAttribute("data-product-id");
     n = b.getAttribute("data-product-name");
     p = b.getAttribute("data-product-price");
+    productsInBasket = getCookie("productsInBasket").split(",");
 
     productsInBasket.forEach((pb) => {
-      if (pb[0] == i) {
+      if (pb == i) {
         alreadyInBasket = true;
         pb[3]++;
         quantity = pb[3];
@@ -31,18 +32,26 @@ let quantity = 1;
     } else {
       productsInBasket.push(product);
     }
+
     setCookie("productsInBasket", productsInBasket, 1);
+
     let added = Array.from(document.getElementsByClassName("added"));
-    if(added.length != 0) {
+    if (added.length != 0) {
       added.forEach((a) => {
         a.remove();
-      })
-    };
+      });
+    }
 
     let add = document.createElement("p");
-    add.innerText = "Just added to basket";
-    add.classList.add("text-success", "added");
+    if (alreadyInBasket == true) {
+      add.innerText = "Already in basket";
+      add.classList.add("text-danger", "added");
+    } else {
+      add.innerText = "Just added to basket";
+      add.classList.add("text-success", "added");
+    }
     b.parentElement.appendChild(add);
+
     alreadyInBasket = false;
     product = [];
   });

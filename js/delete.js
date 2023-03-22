@@ -18,6 +18,7 @@ trash.forEach((t) => {
         i += 12;
         break;
     }
+    console.log(productData[i]);
 
     productData[i + 3]--;
     if (productData[i + 3] == 0) {
