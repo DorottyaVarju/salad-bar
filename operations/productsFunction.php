@@ -7,7 +7,7 @@ function Products(): void
   foreach ($GLOBALS["result"] as $r) {
     echo "
           <section class='col-lg-6 products'>
-          <img src='/salad-bar/media/image/products/" .
+          <img src='/salad-bar/image/products/" .
       $r["type"] .
       "/" .
       $r["image"] .

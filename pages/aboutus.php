@@ -15,7 +15,7 @@ require_once "../database/dbConnection.php";
      foreach ($result as $r) {
        echo "
          <div class='col-md-3 workers'>
-         <img src='../media/image/workers/" .
+         <img src='../image/workers/" .
          $r["image"] .
          "' width='700' height='700' alt='" .
          $r["firstname"] .
