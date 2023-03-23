@@ -5,10 +5,11 @@ let totalQuantity = 0,
 totalPrice = 0;
 const tbody = document.getElementsByTagName("tbody");
 
-productData = getCookie("productsInBasket").split(",");
-
-if (productData[0] == "") {
-  productData.shift();
+if (getCookie("productsInBasket") !== null) {
+  productData = getCookie("productsInBasket").split(",");
+  if (productData[0] == "") {
+    productData.shift();
+  }
 }
 
 for (i = 0; i < productData.length; i += 4) {
