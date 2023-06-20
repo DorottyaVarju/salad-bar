@@ -90,6 +90,9 @@ require_once "../database/dbConnection.php";
             $handle->execute($params);
 
             $result = $handle->fetchAll(PDO::FETCH_ASSOC);
+
+            setcookie('productsInBasket', '', time() - 3600, '/');
+
             echo "<table class='table table-condensed table-borderless'>
             <thead>
             <tr><th></th><th>Order Information</th><th></th></tr>
