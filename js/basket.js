@@ -2,8 +2,12 @@ const basket = document.querySelectorAll(".basket");
 let i, n, p;
 let product = [];
 let productsInBasket;
-productsInBasket = getCookie("productsInBasket").split(",");
-if (productsInBasket[0] == "") {
+if (getCookie("productsInBasket") !== null) {
+  productsInBasket = getCookie("productsInBasket").split(",");
+  if (productsInBasket[0] == "") {
+    productsInBasket = [];
+  }
+} else {
   productsInBasket = [];
 }
 
@@ -15,8 +19,9 @@ let quantity = 1;
     i = b.getAttribute("data-product-id");
     n = b.getAttribute("data-product-name");
     p = b.getAttribute("data-product-price");
-    productsInBasket = getCookie("productsInBasket").split(",");
-
+    if (getCookie("productsInBasket") !== null) {
+      productsInBasket = getCookie("productsInBasket").split(",");
+    }
     productsInBasket.forEach((pb) => {
       if (pb == i) {
         alreadyInBasket = true;

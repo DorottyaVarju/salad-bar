@@ -30,7 +30,7 @@ session_start(); ?>
     <link rel="stylesheet" href="/salad-bar/css/footer.css" type="text/css" />
     <link rel="stylesheet" href="/salad-bar/css/home.css" type="text/css" />
     <title>Salad Bar</title>
-    <link rel="icon" type="image/x-icon" href="/salad-bar/media/image/leaf.png" />
+    <link rel="icon" type="image/x-icon" href="/salad-bar/image/leaf.png" />
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light fixed-top">
